@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { InfinitySpin } from "react-loader-spinner";
-import { Link } from "react-router"
+import { Link } from "react-router";
 import {
   Landmark,
   User,
@@ -108,7 +108,8 @@ function PortalAccess() {
                 securely.
               </p>
               <button className="w-full bg-[#13a046] text-white py-3 px-6 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-[#13a046]/90 transition-colors  cursor-pointer">
-               <Link to="/citizenlogin"> Login as Citizen</Link> <LogIn className="w-5 h-5" />
+                <Link to="/citizenlogin"> Login as Citizen</Link>{" "}
+                <LogIn className="w-5 h-5" />
               </button>
             </div>
             <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-shadow">
