@@ -27,6 +27,23 @@ const App = () => {
           path="/standardadminregister"
           element={<StandardAdminRegister />}
         />
+
+      {/*super admin routes */}
+      <Route element={<PrivateRoute allowedRoles={["superadmin"]} />}>
+        <Route path="/superadmin/dashboard" element={<div>Super Admin Dashboard</div>} />
+      </Route>
+
+      {/* standard admin routes */}
+
+      <Route element={<PrivateRoute allowedRoles={["standardadmin"]} />}>
+        <Route path="/admin/dashboard" element={<div>Standard Admin Dashboard</div>} />
+      </Route>
+
+
+      {/* citizen routes */}
+      <Route element={<PrivateRoute allowedRoles={["citizen"]} />}>
+        <Route path="/citizen/dashboard" element={<div>Citizen Dashboard</div>} />
+      </Route>
       </Routes>
     </div>
   );
