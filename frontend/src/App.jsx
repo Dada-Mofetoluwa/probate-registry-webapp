@@ -5,6 +5,7 @@ import CitizenLogin from "./pages/Auth/citizen/CitizenLogin";
 import CitizenRegistration from "./pages/Auth/citizen/CitizenRegistration";
 import UnifiedAdminLogin from "./pages/Auth/admin/UnifiedAdminLogin";
 import SuperAdminRegister from "./pages/Auth/admin/SuperAdminRegister";
+import StandardAdminRegister from "./pages/Auth/admin/StandardAdminRegister";
 
 const App = () => {
   return (
@@ -13,8 +14,19 @@ const App = () => {
         <Route path="/portalaccess" element={<PortalAccess />} />
         <Route path="/citizenlogin" element={<CitizenLogin />} />
         <Route path="/citizenregistration" element={<CitizenRegistration />} />
-        <Route path="/adminlogin" element={<UnifiedAdminLogin />} />
+        <Route
+          path="/adminlogin"
+          element={<UnifiedAdminLogin tier="standard" />}
+        />
+        <Route
+          path="/superadminlogin"
+          element={<UnifiedAdminLogin tier="super" />}
+        />
         <Route path="/superadminregister" element={<SuperAdminRegister />} />
+        <Route
+          path="/standardadminregister"
+          element={<StandardAdminRegister />}
+        />
       </Routes>
     </div>
   );

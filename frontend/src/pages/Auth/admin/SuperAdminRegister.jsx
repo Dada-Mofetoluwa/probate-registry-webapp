@@ -6,7 +6,7 @@ import { IoAlertCircleSharp } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { FaIdCard } from "react-icons/fa";
 import { Eye, EyeOff, Key } from "lucide-react";
-
+import { PiUserCheck } from "react-icons/pi";
 import { MdAlternateEmail } from "react-icons/md";
 import { InfinitySpin } from "react-loader-spinner";
 import { useEffect, useState } from "react";
@@ -167,14 +167,14 @@ const SuperAdminRegister = () => {
                   type="submit"
                   className="w-full bg-[#1a5c3a] hover:bg-[#154d2f] text-white font-black py-4 rounded-lg transition-colors text-sm tracking-wide flex items-center justify-center gap-2 mt-8"
                 >
-                  <IoShieldCheckmark className="w-5 h-5" />
+                  <PiUserCheck className="w-5 h-5" />
                   CREATE SUPER ADMIN ACCOUNT
                 </button>
                 <div className="mt-6 text-center">
                   <p className="text-sm text-gray-700">
                     Have an account?{" "}
                     <a
-                      href="/adminlogin"
+                      href="/superadminlogin"
                       className="text-[#1a5c3a] font-semibold hover:underline"
                     >
                       Login here

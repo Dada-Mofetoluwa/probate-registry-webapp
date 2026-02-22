@@ -8,8 +8,8 @@ import { Eye, EyeOff, Key } from "lucide-react";
 import { MdAlternateEmail } from "react-icons/md";
 import { InfinitySpin } from "react-loader-spinner";
 import { useEffect, useState } from "react";
-const UnifiedAdminLogin = () => {
-  const [adminTier, setAdminTier] = useState("standard");
+const UnifiedAdminLogin = ({ tier }) => {
+  const [adminTier, setAdminTier] = useState(tier || "standard");
 
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -75,11 +75,8 @@ const UnifiedAdminLogin = () => {
               </button>
             </div>
             <div className="">
-              {adminTier === "standard" ? (
-                <StandardAdminUI />
-              ) : (
-                <SuperAdminUI />
-              )}
+              {adminTier === "standard" && <StandardAdminUI />}
+              {adminTier === "super" && <SuperAdminUI />}
             </div>
           </div>
         </div>
@@ -255,7 +252,10 @@ const SuperAdminUI = () => {
       <div className="mt-6 text-center">
         <p className="text-sm text-gray-700">
           Don't have an account?{" "}
-          <a href="/superadminregister" className="text-[#C7A008] font-semibold hover:underline">
+          <a
+            href="/superadminregister"
+            className="text-[#C7A008] font-semibold hover:underline"
+          >
             Register here
           </a>
         </p>
