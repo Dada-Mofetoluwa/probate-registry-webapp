@@ -24,9 +24,11 @@ dist-ssr
 *.sw?
 
 
-frontend/.env
+admin-frontend/.env
 backend/.env
+citizen-frontend/.env
 
 
  backend/node_modules
- frontend/node_modules
+ admin-frontend/node_modules
+ citizen-frontend/node_modules

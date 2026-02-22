@@ -93,7 +93,7 @@ function PortalAccess() {
               Federal Capital Territory Customary Court of Appeal, Nigeria
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <div className=" max-w-2xl mx-auto mb-8">
             <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-[#13a046]/10 rounded-lg flex items-center justify-center mb-6">
                 <User className="w-6 h-6 text-[#13a046]" />
@@ -111,25 +111,6 @@ function PortalAccess() {
                 {" "}
                 <button className="w-full bg-[#13a046] text-white py-3 px-6 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-[#13a046]/90 transition-colors  cursor-pointer">
                   Login as Citizen <LogIn className="w-5 h-5" />
-                </button>
-              </Link>
-            </div>
-            <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-[#C5A059]/10 rounded-lg flex items-center justify-center mb-6">
-                <Gavel className="w-6 h-6 text-[#C5A059]" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Administrative Portal
-              </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                Secure access for Court Registrars, Judges, and authorized
-                Administrative Staff to review, process, and manage probate
-                filings
-              </p>
-              <Link to="/adminlogin">
-                {" "}
-                <button className="w-full bg-[#C5A059] text-white py-3 px-6 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-[#C5A059]/90 transition-colors cursor-pointer">
-                  Login as Official <ShieldUser className="w-5 h-5" />
                 </button>
               </Link>
             </div>
